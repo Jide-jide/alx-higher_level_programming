@@ -1,4 +1,4 @@
 #!/bin/bash
 # Runs a python script
 python3 $PYFILE
-g
+
