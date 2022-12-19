@@ -9,7 +9,7 @@ def safe_print_integer(value):
 			Returns True else False
 	"""
 	try:
-		print("{:d}".format(x))
+		print("{:d}".format(value))
 		return True
 	except ValueError:
 		return False
