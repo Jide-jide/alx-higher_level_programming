@@ -21,8 +21,6 @@ def matrix_divided(matrix, div):
     Returns:
         matrix: A result of the division.
     """
-    
-    matrix_len = len(matrix)
    
     if div == 0:
         raise ZeroDivisionError("division by zero")
@@ -30,12 +28,14 @@ def matrix_divided(matrix, div):
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     
-    if matrix_len == 0:
+    if matrix == None or len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-       
+     
+    matrix_len = len(matrix)
+    
     for i in range(matrix_len):
         if len(matrix[0]) == len(matrix[i]):
             pass
