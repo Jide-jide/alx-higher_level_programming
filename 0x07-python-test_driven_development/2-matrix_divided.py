@@ -7,14 +7,32 @@ Attributes:
 
 def matrix_divided(matrix, div):
     
+    """Divides all elements of a matrix.
+    Args:
+        matrix (list): A list of lists of integers or floats.
+        div (int/float): Value to divide by.
+    Raises:
+        TypeError: If matrix is not a list of lists of integers or floats.
+        TypeError: If each row of the matrix isn't of the same size.
+        TypeError: If an element of any list is not an integer or float.
+        TypeError: If a row in the matrix is not a list.
+        TypeError: If div is not an integer or a float.
+        ZeroDivisionError: If div is equal to 0.
+    Returns:
+        matrix: A result of the division.
+    """
+    
     matrix_len = len(matrix)
-
+   
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-
+    
+    if matrix_len == 0:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
        
