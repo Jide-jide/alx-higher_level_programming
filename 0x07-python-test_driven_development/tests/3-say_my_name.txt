@@ -11,14 +11,14 @@ Importing the function say_my_name.
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Passing first_name and last_name correctly.
-    >>> say_my_name("Wendy", "Munyasi")
-    My name is Wendy Munyasi
+    >>> say_my_name("jide", "jide")
+    My name is jide jide
 
-    >> say_my_name("Breezy")
-    My name is Breezy
+    >> say_my_name("jide")
+    My name is jide
 
 Passing last_name as None.
-    >>> say_my_name("Wendy", None)
+    >>> say_my_name("Jide", None)
     Traceback (most recent call last):
         ...
     TypeError: last_name must be a string
@@ -30,24 +30,30 @@ Passing first_name and last_name as None.
     TypeError: first_name must be a string
 
 Passing first name as None.
-    >>> say_my_name(None, "Breezy")
+    >>> say_my_name(None, "jide")
     Traceback (most recent call last):
         ...
     TypeError: first_name must be a string
 
 Passing wrong types as first_name and last_name
-    >>> say_my_name(1, "Breezy")
+    >>> say_my_name(1, "jide")
     Traceback (most recent call last):
         ...
     TypeError: first_name must be a string
 
-    >>> say_my_name("Chris", [4])
+    >>> say_my_name("jide", [4])
     Traceback (most recent call last):
         ...
     TypeError: last_name must be a string
 
+Passing no argument
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() takes at least 1 argument (0 given)
+
 Passing more than two arguments to say_my_name().
-    >>> say_my_name("Chris", "Breezy", "Brown") #doctest: +ELLIPSIS
+    >>> say_my_name("jide", "jide", "jide") #doctest: +ELLIPSIS
     Traceback (most recent call last):
         ...
     TypeError: say_my_name() takes at most 2 arguments ...
