@@ -13,7 +13,7 @@ def say_my_name(first_name, last_name=""):
     Raises:
         TypeError: If either first name or last name is not a string.
     """
-    
+
     if isinstance(first_name, (str)):
         pass
     else:
@@ -25,5 +25,5 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
 
     name = "My name is {} {}".format(first_name, last_name)
-    
+
     print(name.strip())
