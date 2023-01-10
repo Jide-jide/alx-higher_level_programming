@@ -11,4 +11,3 @@ def from_json_string(my_str):
         type: Python object.
     """
     return json.loads(my_str)
-
