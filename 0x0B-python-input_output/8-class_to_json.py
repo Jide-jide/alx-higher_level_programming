@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-""" My class module
-"""
+"""Module containing the function class_to_json"""
 
 
-class MyClass:
-    """ My class
+def class_to_json(obj):
+    """Returns the dictionary description with simple data structure,
+    (list, dictionary, string, integer and boolean) for JSON serialization,
+    of an object.
+    Args:
+        obj (MyClass): object.
+    Returns:
+        dict: dictionary.
     """
-
-    def __init__(self, name):
-        self.name = name
-        self.number = 0
-
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
+    # print("type of obj --> {}".format(type(obj)))
+    return obj.__dict__
